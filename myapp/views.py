@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .models import Project, Task
 
 # Create your views here.
 
@@ -18,9 +19,11 @@ def about(request):
     return HttpResponse("<h2>About</h2> <p> This is about page</p>")
 
 def projects(request):
-    return HttpResponse("<h2>Projects</h2>")
+    projects = list(Project.objects.values())
+    return JsonResponse(projects, safe=False)
 
-def tasks(request):
-    return HttpResponse("<h2>Tasks</h2>")
+def tasks(request, id):
+    task = Task.objects.get(id=id) 
+    return HttpResponse('tasks: %s' % task.tittle)
 
     
