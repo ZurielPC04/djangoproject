@@ -4,6 +4,8 @@
 <div>
   <h1>{{ task.tittle }}</h1>
   <p>{{ task.description }}</p>
-  <p>{{ task.project }}</p>
+  <p>{{ task.project.name }}</p>
+  <button>Delete</button>
+  <button>Update</button>
 </div>
 {% endfor %}
