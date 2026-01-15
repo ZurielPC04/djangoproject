@@ -9,6 +9,8 @@ urlpatterns = [
     path('ID/<int:id>', views.numeroId),
     path('projects/', views.projects),
     path('tasks/<int:id>', views.tasks),
+    path('tittle/<str:tittle>', views.tasks),
+    
     
 ]
 
