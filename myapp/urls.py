@@ -11,6 +11,7 @@ urlpatterns = [
     # path('tasks/<int:id>', views.tasks),
     path('tasks/', views.tasks),
     path('tittle/<str:tittle>', views.tasks),
+    path('create_task/', views.create_task),
     
     
 ]
