@@ -8,6 +8,7 @@ urlpatterns = [
     path('hello/<str:username>', views.hello, name="hello"),
     path('ID/<int:id>', views.numeroId, name="numeroId"),
     path('projects/', views.projects, name="projects"),
+    path('projects/<int:id>', views.project_detail, name="project_detail"),
     # path('tasks/<int:id>', views.tasks),
     path('tasks/', views.tasks, name="tasks"),
     path('title/<str:title>', views.tasks, name="tasks"),
