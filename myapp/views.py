@@ -40,10 +40,10 @@ def tasks(request, id):
     # return HttpResponse('tasks: %s' % task.id)
     return render(request, 'tasks.html')
 
-def tasks(request, tittle):
-    task = Task.objects.get(tittle=tittle)
+def tasks(request, title):
+    task = Task.objects.get(title=title)
     # task = get_object_or_404(Task, name=name)
-    return HttpResponse('tasks: %s' % task.tittle)    
+    return HttpResponse('tasks: %s' % task.title)    
 
 def tasks(request):
     tasks = Task.objects.all()
@@ -55,6 +55,7 @@ def create_task(request):
     
     print(request.GET['title'])
     print(request.GET['description'])
+    Task.objects.create(title=request.GET['title'], description=request.GET['description'], projectkey=2)
     
     return render(request, 'create_task.html', {
         'form': CreateNewTask()

@@ -9,10 +9,10 @@ class Project(models.Model):
         return self.name
     
 class Task(models.Model):
-    tittle = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
     description = models.TextField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     done = models.BooleanField(default=False)
     
     def __str__(self):
-        return self.tittle + ' - ' + self.project.name
+        return self.title + ' - ' + self.project.name

@@ -4,7 +4,7 @@
 {% for task in tasks%}
 <div>
   <h1>
-    {% if task.done == False %} ⏳ {% else %} ✅ {% endif %}{{ task.tittle }}
+    {% if task.done == False %} ⏳ {% else %} ✅ {% endif %}{{ task.title }}
   </h1>
 
   {% comment %} {% if task.done == False %}
