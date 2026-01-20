@@ -2,7 +2,16 @@
 
 {% for task in tasks%}
 <div>
-  <h1>{{ task.tittle }}</h1>
+  <h1>
+    {% if task.done == False %} ⏳ {% else %} ✅ {% endif %}{{ task.tittle }}
+  </h1>
+
+  {% comment %} {% if task.done == False %}
+  <p>Tarea Pendiente</p>
+  {% else %}
+  <p>Tarea Realizada</p>
+  {% endif %} {% endcomment %}
+
   <p>{{ task.description }}</p>
   <p>{{ task.project.name }}</p>
   <button>Delete</button>
