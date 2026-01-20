@@ -12,7 +12,6 @@ urlpatterns = [
     path('tasks/', views.tasks),
     path('title/<str:title>', views.tasks),
     path('create_task/', views.create_task),
-    
-    
+    path('create_project/', views.create_project),    
 ]
 
