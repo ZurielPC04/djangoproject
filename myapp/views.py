@@ -55,7 +55,7 @@ def create_task(request):
     
     print(request.GET['title'])
     print(request.GET['description'])
-    Task.objects.create(title=request.GET['title'], description=request.GET['description'], projectkey=2)
+    Task.objects.create(title=request.GET['title'], description=request.GET['description'], project_id=2)
     
     return render(request, 'create_task.html', {
         'form': CreateNewTask()
